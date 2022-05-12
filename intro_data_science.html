@@ -1,0 +1,557 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Initiation à la Data Science</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/moon.css" id="theme">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+        <style>
+            * {
+                color: white;
+            }
+
+            #ds_lifecycle {
+                width: 60%;
+                height: 30%;
+            }
+
+            .barChart {
+                max-width: 50% !important;
+                max-height: 80% !important;
+            }
+
+            .sl_ul {
+                font-size: 30px !important;
+            }
+
+            .awesome {
+      
+      font-family: futura;
+      font-style: italic;
+      
+      width:100%;
+      
+      margin: 0 auto;
+      text-align: center;
+      
+      color:#313131;
+      font-size:45px;
+      font-weight: bold;
+      -webkit-animation:colorchange 10s infinite alternate;
+      
+      
+    }
+
+    @-webkit-keyframes colorchange {
+      0% {
+        
+        color: rgb(233, 233, 255);
+      }
+      
+      10% {
+        
+        color: #efff63;
+      }
+      
+      20% {
+        
+        color: #4be6c7;
+      }
+      
+      30% {
+        
+        color: #ffb07c;
+      }
+      
+      40% {
+        
+        color: rgb(255, 254, 209);
+      }
+      
+      50% {
+        
+        color: #248bcb;
+      }
+      
+      60% {
+        
+        color: rgb(86, 215, 63);
+      }
+      
+      70% {
+        
+        color: #4bffba;
+      }
+      80% {
+     
+        color: #ff3838;
+      }
+      
+      90% {
+     
+        color: #ff735e;
+      }
+      
+      100% {
+        
+        color: rgb(235, 16, 53);
+      }
+    }
+        </style>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	</head>
+
+	<body>
+        <div class="reveal">
+            <div class="slides">
+                <section>
+                    <h2>Initiation à la <h1 class="awesome">Data Science</h1></h2>
+                </section>
+                <section>
+                    <img src="assets/einstein.png">
+                </section>
+                <!-- GOALS -->
+                <section data-background-image="assets/obj.jpg" data-background-opacity="0.1">
+                    <h4>Objectif du <strong>#meetup</strong></h4>
+                    <ol>
+                        <li>Comprendre ce qu'est La Data Science</li>
+                        <li>Main Skillset</li>
+                        <li>Comprendre les différents types de Machine Learning</li>
+                        <li>Différencier les postes orientés DATA (Data Scientist, Data Analyst, Data Eng...)</li>
+                        <li>Q/A</li>
+                        <li>Démo Live Coding</li>
+                    </ol>
+                </section>
+
+                <!-- Transition image -->
+                <section>
+                    <img src="assets/question.png" alt="" srcset="">
+                </section>
+
+                <!-- What is Data Science -->
+                <section data-background-color="white" data-background-opacity="0.1">
+                    <h4>C'est quoi exactement ?</h4>
+                    <img class='fragment' id="ds_lifecycle" src="assets/ds_def.png">
+                </section>
+                <section>
+                    <h4>Les Tâches</h4>
+                    <img class='fragment' src="assets/processus.PNG" alt="" srcset="">
+                </section>
+                <section data-background-color="white" data-background-opacity="0.1">
+                    <h4>Cycle de vie d'un projet</h4>
+                    <img class='fragment' id="ds_lifecycle" src="assets/ds.png">
+                </section>
+
+                <!-- EDA -->
+                <section>
+                    <h4>Exploration des données</h4>
+                    <section>
+                        <p style="font-size: 30px;">Statistiques Descriptives (Analyse univariée & Bivariée)</p>
+                    <ul>
+                        <li>
+                            Les Variables:
+                            <ul class="fragment">
+                                <li>Catégoriques</li>
+                                <li>Numériques</li>
+                            </ul>
+                        </li>
+                        <li>
+                            La Distributions des Variables:
+                            <ul class="fragment">
+                                <li>Symétrique ou Asymétrique</li>
+                                <li>Ou se trouve le centre</li>
+                                <li>Position de la distribution</li>
+                                <li>Dispersion/Propagation de la distribution</li>
+                            </ul>   
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <ul>
+                        <li>
+                            Les mesures de tendances centrales:
+                            <ul class="fragment">
+                                <li style="color: #fc035e;">Les Moyennes (moyenne réduite...)</li>
+                                <li style="color: #fc035e;">La Médiane</li>
+                                <li>Le Mode</li>
+                            </ul>
+                        </li>
+                        <li >
+                            Les paramètres de dispersions
+                            <ul class="fragment">
+                                <li style="color: #fc035e;">Létendue</li>
+                                <li style="color: #fc035e;">L'écart interquartile</li>
+                                <li>La Variance</li>
+                                <li>L'écart type</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    </section>
+                </section>
+                <!-- Data viz -->
+                <section>
+                    <h4>Data Visualization</h4>
+                    <section>
+                        <ul>
+                            <li>
+                                Objectifs:
+                                <ul class="fragment"><li>Explorer les données (Voir la tendance, etc...)</li>
+                                    <li>Interpreter et communiquer les graphes</li></ul>
+                            </li>
+                            <li class="barChart">
+                                Exemples:
+                                <ul>
+                                    <li>
+                                        <small style="text-decoration: underline;">Diagramme en Barre</small>
+                                        <canvas id="barChart" class="fragment"></canvas>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                    <section class="barChart">
+                        <li>
+                            <small style="text-decoration: underline;">Diagramme Circulaire</small>
+                            <canvas id="pieChart" class="fragment"></canvas>
+                        </li>
+                    </section>
+                    <section>
+                        <p style="font-size: 30px; text-decoration: underline; color:rgb(139, 146, 177);">Autres Types de visualisations & Diagrammes:</p>
+                        <ul class="fragment">
+                            <li>Histogramme et tracé de densité</li>
+                            <hr>
+                            <li>Boîte à moustaches</li>
+                            <hr>
+                            <li>Diagramme en bâtons superposés</li>
+                            <hr>
+                            <li>Diagramme à barres côte à côte</li>
+                            <hr>
+                            <li>Graphe de Marimekko</li>
+                            <li>etc ...</li>
+                        </ul>
+                    </section>
+                    <section data-background-iframe="https://covid19.who.int/" data-background-interactive>
+                        <span style="font-size: small;">Exemple Tableau de bord</span></section>
+                    <section>
+                        <p style="font-size: 30px; text-decoration: underline; color:rgb(139, 146, 177);">
+                            Top Libraries de visualisation en Python
+                        </p>
+                        <ul class="fragment">
+                            <li>Matplotlib</li>
+                            <li>Seaborn</li>
+                            <li>Ggplot</li>
+                            <li>Bokeh</li>
+                            <li>Pygal</li>
+                            <li>Plotly</li>
+                            <li>Altair</li>
+                            <li>Folium</li>
+                            <li>etc...</li>
+                        </ul>
+                    </section>
+                </section>
+                <section data-background-image="assets/attention.gif" data-background-size="contain"></section>
+                <!-- ML -->
+                <section>
+                    <h4>Apprentissage Automatique</h4>
+                    <h5>Machine Learning ?</h5>
+                    <img src="assets/wh_ml.jpg" style="height: 500px;">
+                </section>
+                <section>
+                    <h4 style="text-decoration: underline;">Différents Types de Machine Learning:</h4>
+                    <ul class="fragment">
+                        <li style="color: rgb(255, 128, 128);">Machine Learning Supervisé</li>
+                        <li style="color: rgb(62, 158, 255);">Machine Learning Non Supervisé</li>
+                        <li style="color: rgb(0, 217, 141);">Machine Learning Semi Supervisé</li>
+                    </ul>
+                </section>
+                <section>
+                    <h4>Apprentissage <span style="color: rgb(255, 128, 128);">Supervisé</span> Vs. <span style="color: rgb(62, 158, 255);">Non Supervisé</span></h4>
+                    <section>
+                        <ul>
+                            <br><li class="fragment sl_ul" style="color: rgb(255, 128, 128);">Le besoin de données étiquetées dans l'apprentissage automatique supervisé.</li>
+                            <br><li class="fragment sl_ul" style="color: rgb(255, 128, 128);">L'apprentissage supervisé est utilisé pour des tâches de classifications ou de prédictions.</li>
+                            <br><li class="fragment sl_ul" style="color: rgb(62, 158, 255);">L'apprentissage non supervisé est utilisé pour comprendre les relations ou identifier les "patterns" dans les données. </li>
+                            <br><li class="fragment sl_ul" style="color: rgb(62, 158, 255);">L'apprentissage non supervisé utilise des algorithmes pour analyser et regrouper des ensembles de données non étiquetés. 
+                                                                                            Ces algorithmes découvrent des modèles cachés dans les données sans intervention humaine.</li>
+                        </ul>
+                    </section>
+                </section>
+                <section>
+                    <h4 style="color: rgb(255, 128, 128);">Algorithmes de Machine Learning Supervisé</h4>
+                        <ul class="fragment">
+                            <li class="sl_ul">Nearest Neighbor</li>
+                            <li class="sl_ul">Arbres de décision</li>
+                            <li class="sl_ul">XGBoost</li>
+                            <li class="sl_ul">Regression Linéaire</li>
+                            <li class="sl_ul">Support Vector Machines (SVM)</li>
+                            <li class="sl_ul">Naive Bayes</li>
+                            <li class="sl_ul">Neural Networks</li>
+                            <li class="sl_ul">etc...</li>
+                        </ul>
+                </section>
+                <section>
+                    <h4 style="color: rgb(62, 158, 255);">Algorithmes de Machine Learning Non supervisé</h4>
+                        <ul class="fragment">
+                            <li class="sl_ul">k-means clustering</li>
+                            <li class="sl_ul">Réduction de dimensions</li>
+                            <li class="sl_ul">Décomposition en valeurs singulières</li>
+                            <li class="sl_ul">Auto-encoder</li>
+                            <li class="sl_ul">etc...</li>
+                        </ul>
+                </section>
+
+                <!-- Deep Learning -->
+                <section>
+                    <h4 style="color: black;">Deep Learning ?<br> Inona koa izany ? ilaiko @ Fiainana ?</h4>
+                    <section id="nn" data-background="assets/nn.gif" data-background-size="contain" data-background-opacity="0.9">
+                    </section>
+                    <section>
+                        <h4>Deep Learning</h4>
+                        <p class="fragment">
+                            Un type d'apprentissage automatique basé sur des réseaux de neurones artificiels dans 
+                            lesquels plusieurs couches de traitement sont utilisées pour extraire des 
+                            <span style="color: red;">
+                                caractéristiques.
+                            </span>
+                        </p>
+                        <p class="fragment" style="font-size: 20px;">What ???</p>
+                        <p class="fragment" style="font-size: 40px;">What ???</p>
+                        <p class="fragment" style="font-size: 100px;">What ???</p>
+                    </section>
+                    <section>
+                        OK! Passons aux choses sérieuses.<br>
+                        Plogeons dans les détails du réseau de neurones.
+                    </section>
+                </section>
+                <section data-background-color="white">
+                    <h4>Un Neurone</h4>
+                    <section></section>
+                    <img src="assets/neuron.png">
+                </section>
+                <section data-background-color="white">
+                    <h4>Un Perceptron</h4>
+                    <section></section>
+                    <img src="assets/perceptron.png">
+                </section>
+                <section>
+                    <h4>Les Fonctions D'activations</h4>
+                    <section>
+                        <div class="fragment">
+                            <u>Fonction Sigmoid</u>
+                            <span>$$ \sigma(x) =  \frac{\mathrm{1} }{\mathrm{1} + e^{-x} }  $$</span>
+                            <div style="background-color: white; margin: auto; width: 400px;"><img style="width: 400px;" src="assets/sigmoid.png"></div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="fragment">
+                            <u>Fonction tanh</u>
+                            <span>$$ \tanh(x) = \frac{e^x - e^{-x}}{e^x + e^{-x}} $$</span>
+                            <div style="background-color: white; margin: auto; width: 400px;"><img style="width: 400px;" src="assets/tanh.png"></div>
+                        </div>
+                    </section>
+                    <section>
+                        etc...
+                    </section>
+                </section>
+                <!-- Transition -->
+                <section data-background="assets/think.gif" data-background-size="50%"></section>
+
+                <!-- Data Engineering -->
+                <section>
+                    <section>
+                        <h4>Data Engineering</h4>
+                    </section>
+                    <section>
+                        <h4>Data Engineering</h4>
+                        L'ensemble des méthodes pour créer des systèmes qui <span style="color: rgb(255, 128, 128);">collectent</span>,
+                        <span style="color: rgb(255, 128, 128);">gèrent</span> et <span style="color: rgb(255, 128, 128);">convertissent</span> 
+                        les données brutes (Big Data) en informations exploitable par les <span style="font-style: italic; 
+                        font-family: Sofia;" class = "awesome">Data Scientist</span> (like me &#128526;) 
+                        et analyst. <br>
+                        L'objectif ultime est de rendre les données accessibles afin que les autres agents puissent les utiliser pour 
+                        évaluer et optimiser leurs performances.
+                    </section>
+                    <section>
+                            <ul>
+                                <u>Le Data Engineer se concentrent sur:</u>
+                                <br>
+                                <br>
+                                <li class="fragment">
+                                    La création des pipelines ETL/ELT Big Data.
+                                </li>
+                                <br>
+                                <li class="fragment">
+                                    la préparation à la production des données et à la cohérence des données tels que les formats, la résilience...
+                                </li>
+                                <br>
+                                <li class="fragment">
+                                    La mise à l'échelle et la sécurité (du data pipeline bien sûr).
+                                </li>
+                                <br>
+                                <li class="fragment">
+                                    Les langages de programmation tels que Python, Scala, Java
+                                </li>
+                            </ul>
+                        </section>
+                        <section>
+                            <h4>Concevoir un Data Pipeline</h4>
+                            <span style="text-decoration: underline;">
+                                Plus généralement la conception consiste à:
+                            </span>
+                            <br>
+                            <ul style="font-size: 30px;">
+                                <li class="fragment">Identifier les sources de données.</li>
+                                <br>
+                                <li class="fragment">Extraire et fusionner les données provenant des différentes sources.</li>
+                                <br>
+                                <li class="fragment">Catégoriser les données et standardiser/normaliser.</li>
+                                <br>
+                                <li class="fragment">Nettoyer et filtrer des données.</li>
+                                <br>
+                                <li class="fragment">Charger les données vers la destination.</li>
+                                <br>
+                                <li class="fragment">Et automatiser le processus afin qu'il s'exécute en continu et/ou périodiquement...</li>
+                            </ul>
+                        </section>
+                        <section data-background-color="black">
+                            <h4>Architecture de base</h4>
+                            <div class="fragment">
+                                <img src="assets/simple_pipe.png" alt="" srcset="">
+                            </div>
+                        </section>
+                        <section data-background-color="black">
+                            <h4>Data Pipeline</h4>
+                            <div class="fragment">
+                                <img src="assets/advanced_pipe.png" alt="" srcset="">
+                            </div>
+                        </section>
+                        <section>
+                            <h4>Top Technologies/outils pour les Data Engineer</h4>
+                            <ul class="fragment">
+                                <li>Python, Scala, Java</li>
+                                <li>Optimisation</li>
+                                <li>Apache Airflow / luigi / cron</li>
+                                <li>SQL</li>
+                                <li>Data Warehousing</li>
+                                <li>Apache Hive, Spark, Hadoop</li>
+                                <li>etc...</li>
+                            </ul>
+                        </section>
+                </section>
+                
+                <!-- Summary -->
+                <section>
+                    <h4>En résumé</h4>
+                    <ul>
+                        <li class="fragment">
+                            <span>Data Analysis pour l'analyse de données.</span>
+                        </li>
+                        <li class="fragment">
+                            <span>Data Science pour les analyses Descriptives et Predictives.</span>
+                        </li>
+                        <li class="fragment">
+                            <span>Data Engineering pour rendre les Data Scientist/Analyst & Machine Learning Engineer heureux.</span>
+                        </li>
+                        <li class="fragment">
+                            <span>Machine Learning Engineer pour tout ce qui est ML et DL.</span>
+                        </li>
+                    </ul>
+                </section>
+                <section data-background-iframe="https://neptune.ai/blog/ml-engineer-vs-data-scientist" data-background-interactive>
+                    <div style="position: absolute; width: 40%; left: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.7); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+						<h4>Data Scientist<br> Sa ve<br> Machine Learning Engineer ?</h4>
+					</div>
+                </section>
+
+                <!-- Live coding -->
+                <section>
+                    <h4>Live Coding &#128526;</h4>
+                </section>
+            </div>
+        </div>
+
+
+        <!-- End REVEAL -->
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/zoom/zoom.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/search/search.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+        <script src="plugin/math/math.js"></script>
+		<script>
+
+			// Also available as an ES module, see:
+			// https://revealjs.com/initialization/
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				center: true,
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight, RevealMath.KaTeX ]
+			});
+
+            const labels = [
+            "Jamais",
+            "Avant",
+            "Actuel"
+        ];
+      
+        const data = {
+          labels: labels,
+          datasets: [{
+            label: 'Statut Fumeur',
+            backgroundColor: 'rgb(255, 99, 132)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: [110, 50, 40],
+          }]
+        };
+        const config = {
+          type: 'bar',
+          data: data,
+          options: {}
+        };
+        const myChart = new Chart(
+        document.getElementById('barChart'),
+        config
+        );
+        const pieData = {
+        labels: [
+            "Jamais",
+            "Avant",
+            "Actuel"
+        ],
+        datasets: [{
+            label: 'My First Dataset',
+            data: [0.55, 0.2, 0.2],
+            backgroundColor: [
+            'rgb(255, 99, 132)',
+            'rgb(54, 162, 235)',
+            'rgb(255, 205, 86)'
+            ],
+            hoverOffset: 4
+        }]
+        };
+        const pieConfig = {
+        type: 'pie',
+        data: pieData,
+        };
+        const pieChart = new Chart(
+            document.getElementById('pieChart'),
+            pieConfig
+        );
+
+		</script>
+	</body>
+</html>
